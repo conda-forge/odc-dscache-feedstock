@@ -1,13 +1,13 @@
 {% set name = "odc-dscache" %}
-{% set version = "0.2.3" %}
+{% set version = "1.9.1" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/odc-dscache-{{ version }}.tar.gz
-  sha256: b36f62d9c0c4371cf9c1526bb772a617bda85d338ca85cf4b0be057839db575a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6264f9479e3b777d24596bcbfdf0f5720491dc13749bd665027e6e131dba7ef3
 
 build:
   entry_points:
@@ -15,7 +15,7 @@ build:
     - dstiler = odc.dscache.apps.dstiler:cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
