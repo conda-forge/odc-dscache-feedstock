@@ -1,5 +1,5 @@
 {% set name = "odc-dscache" %}
-{% set version = "1.9.0" %}
+{% set version = "1.9.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9676cb959263212f7770fd2263ca13dc62837262891c10ab286452106aeee108
+  sha256: 6264f9479e3b777d24596bcbfdf0f5720491dc13749bd665027e6e131dba7ef3
 
 build:
   entry_points:
