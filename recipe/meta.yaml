@@ -24,7 +24,7 @@ requirements:
     - setuptools
   run:
     - python >={{ python_min }}
-    - datacube
+    - datacube >=1.9.0
     - pandas
     - psycopg2
     - zstandard
